@@ -55,7 +55,7 @@ public class ventanaRegis extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ventanaRegGoogle v1 = new ventanaRegGoogle();
+				ventanaLog v1 = new ventanaLog();
 			}
 		});
 		
@@ -63,7 +63,7 @@ public class ventanaRegis extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ventanaRegFacebook v1 = new ventanaRegFacebook();
+				ventanaLog v1 = new ventanaLog();
 			}
 		});
 		
