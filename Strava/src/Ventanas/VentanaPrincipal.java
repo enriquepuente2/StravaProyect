@@ -232,12 +232,24 @@ public class VentanaPrincipal extends JFrame {
 		ponerFotoABoton(btnInicioSesion, "imagenes\\IconoIniciarSesion.png", 30, 30, 30, 30);
 		
 		btnSalir = new JButton();
+		btnSalir.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		ponerFotoABoton(btnSalir, "imagenes\\IconoSalir.png", 30, 30, 30, 30);
 		
 		btnRegistrarme = new JButton();
+		btnRegistrarme.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		ponerFotoABoton(btnRegistrarme, "imagenes\\IconoRegistro.png", 30, 30, 30, 30);
 		
 		btnCerrarSesion = new JButton();
+		btnCerrarSesion.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		ponerFotoABoton(btnCerrarSesion, "imagenes\\IconoCerrarSesion.png", 30, 30, 30, 30);
 		
 		
@@ -276,6 +288,10 @@ public class VentanaPrincipal extends JFrame {
 		lblHora = new JLabel("");
 		
 		btnCambiarCon = new JButton();
+		btnCambiarCon.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		ponerFotoABoton(btnCambiarCon, "imagenes\\IconoCambiarContrase�a.png", 30, 30, 30, 30);
 		btnCambiarCon.setVisible(false);
 		
