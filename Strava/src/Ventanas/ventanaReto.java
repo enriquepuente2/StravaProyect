@@ -9,6 +9,7 @@ import java.awt.FlowLayout;
 
 public class ventanaReto extends JFrame{
 	public ventanaReto() {
+		setBounds(425, 150, 800, 408);
 		getContentPane().setLayout(new GridLayout(0, 1, 0, 0));
 		
 		JPanel panel_1 = new JPanel();
@@ -36,5 +37,6 @@ public class ventanaReto extends JFrame{
 		JButton btnNewButton_3_1 = new JButton("Salir");
 		panel_2.add(btnNewButton_3_1);
 
+		setVisible(true);
 	}
 }
