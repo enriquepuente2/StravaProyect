@@ -48,24 +48,17 @@ public class ventanaRegis extends JFrame{
 		JPanel panel_2 = new JPanel();
 		getContentPane().add(panel_2, BorderLayout.SOUTH);
 		
-		JButton btnNewButton_2 = new JButton("Registrar");
-		panel_2.add(btnNewButton_2);
+		JButton btnRegistrar = new JButton("Registrar");
+		panel_2.add(btnRegistrar);
 		
-		btnRegGoogle.addActionListener(new ActionListener() {
+		btnRegistrar.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				ventanaLog v1 = new ventanaLog();
+				dispose();
 			}
 		});
 		
-		btnRegFacebook.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				ventanaLog v1 = new ventanaLog();
-			}
-		});
 		
 		
 		setVisible(true);

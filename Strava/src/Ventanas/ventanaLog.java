@@ -10,6 +10,9 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
@@ -66,6 +69,14 @@ public class ventanaLog extends JFrame{
 		btnLog = new JButton("Iniciar sesion");
 		btnLog.setBounds(127, 152, 117, 29);
 		p4.add(btnLog);
+		
+		btnLog.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 		
 		setVisible(true);
 	}

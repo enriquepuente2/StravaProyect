@@ -4,6 +4,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.JLabel;
 import java.awt.FlowLayout;
 
@@ -22,20 +25,28 @@ public class ventanaReto extends JFrame{
 		getContentPane().add(panel);
 		panel.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
 		
-		JButton btnNewButton = new JButton("Unirse Reto");
-		panel.add(btnNewButton);
+		JButton btnUnirse = new JButton("Unirse Reto");
+		panel.add(btnUnirse);
 		
-		JButton btnNewButton_1 = new JButton("Crear Reto");
-		panel.add(btnNewButton_1);
+		JButton btnCrearReto = new JButton("Crear Reto");
+		panel.add(btnCrearReto);
 		
-		JButton btnNewButton_2 = new JButton("Retos Activos");
-		panel.add(btnNewButton_2);
+		JButton btnRetosActivos = new JButton("Retos Activos");
+		panel.add(btnRetosActivos);
 		
 		JPanel panel_2 = new JPanel();
 		getContentPane().add(panel_2);
 		
-		JButton btnNewButton_3_1 = new JButton("Salir");
-		panel_2.add(btnNewButton_3_1);
+		JButton btnSalir = new JButton("Salir");
+		panel_2.add(btnSalir);
+		
+		btnSalir.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+			}
+		});
 
 		setVisible(true);
 	}
