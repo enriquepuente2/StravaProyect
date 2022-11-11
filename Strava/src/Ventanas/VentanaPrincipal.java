@@ -286,6 +286,21 @@ public class VentanaPrincipal extends JFrame {
 		
 		btnCerrarSesion_1 = new JButton();
 		ponerFotoABoton(btnCerrarSesion_1, "src\\imagenes\\IconoCerrarSesion.png", 30, 30, 30, 30);
+		
+		btnReto.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				ventanaReto v1 = new ventanaReto();
+			}
+		});
+//		btnEntrenamiento.addActionListener(new ActionListener() {
+//			
+//			@Override
+//			public void actionPerformed(ActionEvent e) {
+//				ventanaEntrenamiento v1 = new ventanaEntrenamiento();
+//			}
+//		});
 	}
 		
 		 	
