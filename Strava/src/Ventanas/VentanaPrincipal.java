@@ -168,7 +168,7 @@ public class VentanaPrincipal extends JFrame {
 
         lblFrase = new JLabel("");
 
-        ImageIcon im1 = new ImageIcon("src\\imagenes\\titulo.gif");
+        ImageIcon im1 = new ImageIcon("imagenes\\titulo.gif");
         ImageIcon imagenConDimensiones1 = new ImageIcon(im1.getImage().getScaledInstance(400,75,Image.SCALE_DEFAULT));
         lblFrase.setIcon(imagenConDimensiones1);
 		
@@ -191,7 +191,7 @@ public class VentanaPrincipal extends JFrame {
 		panelArribaIzq1.add(panelArribaIzq13);
 		
 		btnInicioSesion_1 = new JButton();
-		btnInicioSesion_1.setBackground(new Color(255, 0, 128));
+		btnInicioSesion_1.setBackground(new Color(255, 128, 0));
 		panelArribaIzq13.add(btnInicioSesion_1);
 		
 		btnSalir_1 = new JButton();
@@ -214,16 +214,16 @@ public class VentanaPrincipal extends JFrame {
 		setLocationRelativeTo( null );
 		
 		btnInicioSesion_1 = new JButton();
-		ponerFotoABoton(btnInicioSesion_1, "src\\imagenes\\IconoIniciarSesion.png", 30, 30, 30, 30);
+		ponerFotoABoton(btnInicioSesion_1, "imagenes\\IconoIniciarSesion.png", 30, 30, 30, 30);
 		
 		btnSalir_1 = new JButton();
-		ponerFotoABoton(btnSalir_1, "src\\imagenes\\IconoSalir.png", 30, 30, 30, 30);
+		ponerFotoABoton(btnSalir_1, "imagenes\\IconoSalir.png", 30, 30, 30, 30);
 		
 		btnRegistrarme_1 = new JButton();
-		ponerFotoABoton(btnRegistrarme_1, "src\\imagenes\\IconoRegistro.png", 30, 30, 30, 30);
+		ponerFotoABoton(btnRegistrarme_1, "imagenes\\IconoRegistro.png", 30, 30, 30, 30);
 		
 		btnCerrarSesion_1 = new JButton();
-		ponerFotoABoton(btnCerrarSesion_1, "src\\imagenes\\IconoCerrarSesion.png", 30, 30, 30, 30);
+		ponerFotoABoton(btnCerrarSesion_1, "imagenes\\IconoCerrarSesion.png", 30, 30, 30, 30);
 		
 
 		setVisible(true);
