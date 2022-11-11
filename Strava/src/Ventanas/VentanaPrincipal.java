@@ -269,9 +269,9 @@ public class VentanaPrincipal extends JFrame {
 		btnCerrarSesion_1 = new JButton();
 		ponerFotoABoton(btnCerrarSesion_1, "src\\imagenes\\IconoCerrarSesion.png", 30, 30, 30, 30);
 		
-<<<<<<< HEAD
+
 		setVisible(true);
-=======
+
 		btnReto.addActionListener(new ActionListener() {
 			
 			@Override
@@ -286,7 +286,6 @@ public class VentanaPrincipal extends JFrame {
 //				ventanaEntrenamiento v1 = new ventanaEntrenamiento();
 //			}
 //		});
->>>>>>> branch 'master' of git@github.com:enriquepuente2/StravaProyect.git
 	}
 		
 		 	
