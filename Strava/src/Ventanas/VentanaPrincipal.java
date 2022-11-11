@@ -100,24 +100,6 @@ public class VentanaPrincipal extends JFrame {
 	private JButton btnSalir_1;
 	private JButton btnCerrarSesion_1;
 	private JButton btnRegistrarme_1;
-	
-	
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VentanaPrincipal frame = new VentanaPrincipal();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
 
 	public VentanaPrincipal() {
 		
@@ -286,6 +268,8 @@ public class VentanaPrincipal extends JFrame {
 		
 		btnCerrarSesion_1 = new JButton();
 		ponerFotoABoton(btnCerrarSesion_1, "src\\imagenes\\IconoCerrarSesion.png", 30, 30, 30, 30);
+		
+		setVisible(true);
 	}
 		
 		 	
