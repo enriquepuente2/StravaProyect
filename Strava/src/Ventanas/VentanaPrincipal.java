@@ -82,9 +82,6 @@ public class VentanaPrincipal extends JFrame {
 	private JPanel contentPane;
 	private JPanel panelCentral, panelArriba, panelNorte, panelArribaDrc, panelArribaIzq, panelNorteIzq, panelNorteMedio, panelNorteDrc;
 	private JPanel panelP1, panelP2, panelArribaIzq1, panelArribaIzq12, panelArribaIzq2;
-	private JButton btnSalir, btnRegistrarme;
-	private JButton btnReto, btnEntrenamiento;
-	public static JButton btnCerrarSesion, btnCambiarCon,  btnInicioSesion;
 	private JFrame ventanaActual;
 	
 	private JLabel lblTitulo;
@@ -96,6 +93,13 @@ public class VentanaPrincipal extends JFrame {
 	
 	
 	static Logger log = Logger.getLogger("Log de Usuarios");
+	private JButton btnReto;
+	private JButton btnEntrenamiento;
+	private JPanel panelArribaIzq13;
+	private JButton btnInicioSesion_1;
+	private JButton btnSalir_1;
+	private JButton btnCerrarSesion_1;
+	private JButton btnRegistrarme_1;
 	
 	
 
@@ -117,12 +121,8 @@ public class VentanaPrincipal extends JFrame {
 
 	public VentanaPrincipal() {
 		
-		//BASE DE DATOS
-		
-		
-		
 		//CREACION DEL LOGGER
-		Handler handler;
+		/*Handler handler;
 		try {
 			handler = new FileHandler("Usuarios.log");
 			handler.setFormatter(new SimpleFormatter());
@@ -134,6 +134,8 @@ public class VentanaPrincipal extends JFrame {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
+		*/
+		
 		
 		//PROPIEDADES DE LA VENTANA
 		ventanaActual = this;
@@ -164,15 +166,15 @@ public class VentanaPrincipal extends JFrame {
 		panelArribaIzq1 = new JPanel();
 		panelArribaIzq.add(panelArribaIzq1);
 		panelArribaIzq1.setLayout(new GridLayout(0,3,0,0));
-		panelArribaIzq1.setBackground(new Color(122,217,196));
+		panelArribaIzq1.setBackground(new Color(192, 192, 192));
 		
 		panelArribaIzq12 = new JPanel();
 		panelArribaIzq1.add(panelArribaIzq12);
-		panelArribaIzq12.setBackground(new Color(122,217,196));
+		panelArribaIzq12.setBackground(new Color(192, 192, 192));
 		
 		panelArribaIzq2 = new JPanel();
 		panelArribaIzq.add(panelArribaIzq2);
-		panelArribaIzq2.setBackground(new Color(122,217,196));
+		panelArribaIzq2.setBackground(new Color(192, 192, 192));
 		
 	   
 		panelArribaDrc = new JPanel();
@@ -185,37 +187,31 @@ public class VentanaPrincipal extends JFrame {
 		panelNorte.setLayout(new GridLayout(0,3,0,0));
 		
 		panelNorteIzq = new JPanel();
-		panelNorteIzq.setBackground(new Color(122,217,196));
+		panelNorteIzq.setBackground(new Color(192, 192, 192));
 		panelNorte.add(panelNorteIzq);
 		
 		
 		
 		panelNorteMedio = new JPanel();
-		panelNorteMedio.setBackground(new Color(122,217,196));
+		panelNorteMedio.setBackground(new Color(192, 192, 192));
 		panelNorte.add(panelNorteMedio);
 		
 		panelNorteDrc = new JPanel();
-		panelNorteDrc.setBackground(new Color(122,217,196));
+		panelNorteDrc.setBackground(new Color(192, 192, 192));
 		panelNorte.add(panelNorteDrc);
 	
 		panelP1 = new JPanel();
 		panelArribaDrc.add(panelP1);
-		panelP1.setBackground(new Color(122,217,196));
+		panelP1.setBackground(new Color(192, 192, 192));
+		
+		btnReto = new JButton("RETO");
+		panelP1.add(btnReto);
 		
 		panelP2 = new JPanel();
 		panelArribaDrc.add(panelP2);
-		panelP2.setBackground(new Color(122,217,196));
+		panelP2.setBackground(new Color(192, 192, 192));
 		
-		
-		
-		btnReto = new JButton();
-		btnReto.setText("RETO");
-		ponerFotoABoton(btnReto, "imagenes\\Zapatilla.gif", 120, 120, 120, 120);	
-		panelP1.add(btnReto);
-		
-		btnEntrenamiento = new JButton();
-		btnEntrenamiento.setText("ENTRENAMIENTO");
-		ponerFotoABoton(btnEntrenamiento, "imagenes\\Calcetin.gif", 120, 120, 120, 120);
+		btnEntrenamiento = new JButton("ENTRENAMIENTO");
 		panelP2.add(btnEntrenamiento);
 		
 		
@@ -226,51 +222,16 @@ public class VentanaPrincipal extends JFrame {
 		contentPane.add(panelCentral, BorderLayout.CENTER);
 		contentPane.add(panelNorte, BorderLayout.NORTH);
 		
-		//CREAMOS LOS COMPONENTES
-		btnInicioSesion = new JButton();
-		btnInicioSesion.setText("Inicio Sesion");
-		ponerFotoABoton(btnInicioSesion, "imagenes\\IconoIniciarSesion.png", 30, 30, 30, 30);
-		
-		btnSalir = new JButton();
-		btnSalir.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		ponerFotoABoton(btnSalir, "imagenes\\IconoSalir.png", 30, 30, 30, 30);
-		
-		btnRegistrarme = new JButton();
-		btnRegistrarme.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		ponerFotoABoton(btnRegistrarme, "imagenes\\IconoRegistro.png", 30, 30, 30, 30);
-		
-		btnCerrarSesion = new JButton();
-		btnCerrarSesion.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		ponerFotoABoton(btnCerrarSesion, "imagenes\\IconoCerrarSesion.png", 30, 30, 30, 30);
-		
-		
 		lblNombre = new JLabel("");
-		ImageIcon im = new ImageIcon("imagenes\\Titulo.gif");
-        ImageIcon imagenConDimensiones = new ImageIcon(im.getImage().getScaledInstance(200,50,Image.SCALE_DEFAULT));
-        im.setDescription("Titulo.gif");
+		
+		lblTitulo = new JLabel("");
 
-
-        lblTitulo = new JLabel("");
-
-
-        lblTitulo.setIcon(imagenConDimensiones);
-
-        lblTitulo.setForeground(Color.BLACK);
+		lblTitulo.setForeground(Color.BLACK);
 
         lblFrase = new JLabel("");
 
-        ImageIcon im1 = new ImageIcon("imagenes\\Eslogan.gif");
+        ImageIcon im1 = new ImageIcon("src\\imagenes\\titulo.gif");
         ImageIcon imagenConDimensiones1 = new ImageIcon(im1.getImage().getScaledInstance(400,75,Image.SCALE_DEFAULT));
-        im.setDescription("Eslogan.gif");
         lblFrase.setIcon(imagenConDimensiones1);
 		
 		FlowLayout flowLayout = (FlowLayout) panelNorteIzq.getLayout();
@@ -279,91 +240,56 @@ public class VentanaPrincipal extends JFrame {
 		FlowLayout flowLayout2 = (FlowLayout) panelNorteDrc.getLayout();
 		flowLayout2.setAlignment(FlowLayout.RIGHT);
 		
-		if (lblNombre.getText() == "") {
-			btnCerrarSesion.setVisible(false);
-		}
-		
 		panelNorteMedio.add(lblTitulo);
 		
 		lblHora = new JLabel("");
 		
-		btnCambiarCon = new JButton();
-		btnCambiarCon.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			}
-		});
-		ponerFotoABoton(btnCambiarCon, "imagenes\\IconoCambiarContrase�a.png", 30, 30, 30, 30);
-		btnCambiarCon.setVisible(false);
-		
 		modelosp = new SpinnerNumberModel(50, 0, 100, 1);
-		panelArribaIzq12.add(btnInicioSesion);
-		panelArribaIzq12.add(btnSalir);
-		panelArribaIzq12.add(btnCerrarSesion);
-		panelArribaIzq12.add(btnCambiarCon);
 		
-
 		panelNorteDrc.add(lblHora);
-		panelArribaIzq12.add(btnRegistrarme);
+		
+		panelArribaIzq13 = new JPanel();
+		panelArribaIzq13.setBackground(new Color(192, 192, 192));
+		panelArribaIzq1.add(panelArribaIzq13);
+		
+		btnInicioSesion_1 = new JButton();
+		btnInicioSesion_1.setBackground(new Color(255, 0, 128));
+		panelArribaIzq13.add(btnInicioSesion_1);
+		
+		btnSalir_1 = new JButton();
+		btnSalir_1.setBackground(new Color(255, 0, 128));
+		panelArribaIzq13.add(btnSalir_1);
+		
+		btnCerrarSesion_1 = new JButton();
+		btnCerrarSesion_1.setBackground(new Color(255, 0, 128));
+		panelArribaIzq13.add(btnCerrarSesion_1);
+		
+		btnRegistrarme_1 = new JButton();
+		btnRegistrarme_1.setBackground(new Color(255, 0, 128));
+		panelArribaIzq13.add(btnRegistrarme_1);
+		
+		
 		panelNorteIzq.add(lblNombre);
 		
 		panelArribaIzq2.add(lblFrase);
 		
 		setLocationRelativeTo( null );
+		
+		btnInicioSesion_1 = new JButton();
+		ponerFotoABoton(btnInicioSesion_1, "src\\imagenes\\IconoIniciarSesion.png", 30, 30, 30, 30);
+		
+		btnSalir_1 = new JButton();
+		ponerFotoABoton(btnSalir_1, "src\\imagenes\\IconoSalir.png", 30, 30, 30, 30);
+		
+		btnRegistrarme_1 = new JButton();
+		ponerFotoABoton(btnRegistrarme_1, "src\\imagenes\\IconoRegistro.png", 30, 30, 30, 30);
+		
+		btnCerrarSesion_1 = new JButton();
+		ponerFotoABoton(btnCerrarSesion_1, "src\\imagenes\\IconoCerrarSesion.png", 30, 30, 30, 30);
 	}
 		
-		 
-		//EVENTOS
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		//--------------------------------------------------------------------------------------------------------------
-		
-		//HILOS
-		
-		/*
-		 * ESTE HILO NOS MUESTRA LA HORA ACTUAL EL CUAL SE ACTUALIZA CADA SEGUNDO PARA QUE SEA POSIBLE ACTUALIZARSE.
-		 */
-		
-		
+		 	
 	
-		
-		//----------------------------------------------------------------------------------------------------------------
-		
-		
-
-	
-	/**
-	 * Metodo que carga de un fichero de texto los el mapaUsuarios.
-	 */
-	
-	
-	
-	
-	/**
-	 * METODO QUE GUARDA EL mapaUsuarios EN UN FICHERO DE TEXTO
-	 */
-	
-		
-		
-	
-		
-	/**
-	 * METODO QUE PONE UN COLOR DETERMINADO A UN BOTON CON LAS MEDIDAS PERSONALIZADAS
-	 * @param btn --> EL BOTON AL QUE SE LE VA A PONER UNA IM�GEN
-	 * @param rutaFoto --> RUTA DE LA IMAGEN PARA PODER ACCEDER A ELLA
-	 * @param x --> VALOR DE LA COORDENADA X DE LA IMAGEN
-	 * @param y --> VALOR DE LA COORDENADA Y DE LA IMAGEN
-	 * @param width --> ANCHURA DE LA IMAGEN
-	 * @param height --> ALTURA DE LA IMAGEN
-	 */
 	public static void ponerFotoABoton (JButton btn, String rutaFoto, int x, int y, int width, int height) {
 		btn.setBounds(x, y, width, height);
 		int ancho = btn.getWidth();
@@ -373,27 +299,6 @@ public class VentanaPrincipal extends JFrame {
 		btn.setIcon(i);
 		btn.setBackground(new Color(33,138,193));
 	}
-	
-	/**
-	 * METODO QUE PONE UN COLOR SELECCIONADO A UN BOTON CON LAS MEDIDAS PERSONALIZADAS
-	 * @param btn --> EL BOTON AL QUE SE LE VA A PONER UNA IM�GEN
-	 * @param rutaFoto --> RUTA DE LA IMAGEN PARA PODER ACCEDER A ELLA
-	 * @param x --> VALOR DE LA COORDENADA X DE LA IMAGEN
-	 * @param y --> VALOR DE LA COORDENADA Y DE LA IMAGEN
-	 * @param width --> ANCHURA DE LA IMAGEN
-	 * @param height --> ALTURA DE LA IMAGEN
-	 * @param color --> EL COLOR SELECCIONADO
-	 */
-	public static void ponerFotoABotonDelColorQueQuieras (JButton btn, String rutaFoto, int x, int y, int width, int height, Color color) {
-		btn.setBounds(x, y, width, height);
-		int ancho = btn.getWidth();
-		int alto = btn.getHeight();
-		ImageIcon icon = new ImageIcon(rutaFoto);
-		Icon i = new ImageIcon(icon.getImage().getScaledInstance(alto, ancho, Image.SCALE_DEFAULT));
-		btn.setIcon(i);
-		btn.setBackground(color);
-	}
-	
 	
     
 	
