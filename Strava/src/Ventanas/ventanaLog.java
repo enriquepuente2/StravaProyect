@@ -17,58 +17,60 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 
 public class ventanaLog extends JFrame{
-	private JPanel pCentro, p1, p2, p3, p4;
-	private JLabel lblLog, lblEmail,lblContrasenia;
-	private JTextField txtEmail, txtContrasenia;
-	private JButton btnLog;
+	private JPanel contentPane;
+	private JTextField txtEmail;
+	private JPasswordField txtContrasenia;
 	
 	public ventanaLog() {
 		
 		setBounds(425, 150, 800, 408);
 		setTitle("Log In");
-		setResizable(false);
+		setResizable(true);
+		getContentPane().setLayout(new GridLayout(1, 0, 0, 0));
 		
-		pCentro = new JPanel(new GridLayout(4,1));
+		JPanel pCentro = new JPanel();
+		getContentPane().add(pCentro);
+		pCentro.setLayout(new GridLayout(4, 1, 0, 0));
 		
-		p1 = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		p2 = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		p3 = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		p4 = new JPanel(new FlowLayout(FlowLayout.CENTER));
-		
+		JPanel p1 = new JPanel();
 		pCentro.add(p1);
 		
-		lblLog = new JLabel("LOG IN");
-		lblLog.setFont(new Font("Lucida Grande", Font.PLAIN, 18));
-		lblLog.setBounds(128, 40, 154, 16);
+		JLabel lblLog = new JLabel("LOG IN");
 		p1.add(lblLog);
 		
+		JPanel p2 = new JPanel();
 		pCentro.add(p2);
 		
-		lblEmail = new JLabel("Email :");
-		lblEmail.setBounds(69, 53, 61, 16);
+		JLabel lblEmail = new JLabel("Email");
 		p2.add(lblEmail);
 		
 		txtEmail = new JTextField();
-		txtEmail.setBounds(127, 48, 195, 26);
 		p2.add(txtEmail);
 		txtEmail.setColumns(10);
 		
+		JPanel p3 = new JPanel();
 		pCentro.add(p3);
 		
-		lblContrasenia = new JLabel("Contraseña :");
-		lblContrasenia.setBounds(69, 98, 85, 16);
+		JLabel lblContrasenia = new JLabel("Contraseña");
 		p3.add(lblContrasenia);
 		
 		txtContrasenia = new JPasswordField();
-		txtContrasenia.setBounds(162, 93, 160, 26);
 		p3.add(txtContrasenia);
 		txtContrasenia.setColumns(10);
 		
+		JPanel p4 = new JPanel();
 		pCentro.add(p4);
 		
-		btnLog = new JButton("Iniciar sesion");
-		btnLog.setBounds(127, 152, 117, 29);
+		JButton btnLog = new JButton("Iniciar Sesion");
+		btnLog.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				VentanaPrincipal vPrin = new VentanaPrincipal();
+			}
+		});
 		p4.add(btnLog);
+		
+		
+		
 		
 		btnLog.addActionListener(new ActionListener() {
 			

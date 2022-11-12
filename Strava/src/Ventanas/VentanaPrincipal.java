@@ -3,7 +3,7 @@ package Ventanas;
 import java.awt.BorderLayout;
 
 import java.awt.Color;
-
+import java.awt.Dimension;
 import java.awt.FlowLayout;
 
 import java.awt.GridLayout;
@@ -56,6 +56,10 @@ public class VentanaPrincipal extends JFrame {
 	private JButton btnSalir_1;
 	private JButton btnCerrarSesion_1;
 	private JButton btnRegistrarme_1;
+	private JPanel panel;
+	private JPanel panel_1;
+	private JPanel panel_2;
+	private JPanel panel_3;
 
 	public VentanaPrincipal() {
 		
@@ -88,18 +92,18 @@ public class VentanaPrincipal extends JFrame {
 		
 		//CREAMOS LOS PANELES
 		panelCentral = new JPanel();
-		panelCentral.setBackground(new Color(122,217,196));
+		panelCentral.setBackground(new Color(192, 192, 192));
 		panelCentral.setLayout(new GridLayout(0,1,0,0));
 		
 		panelArriba = new JPanel();
-		panelArriba.setBackground(new Color(122,217,196));
+		panelArriba.setBackground(new Color(192, 192, 192));
 		panelArriba.setLayout(new GridLayout(2,0,0,0));
 		panelCentral.add(panelArriba);
 		
 		panelArribaIzq = new JPanel();
 		panelArribaIzq.setLayout(new GridLayout(2, 1));
 		panelArriba.add(panelArribaIzq);
-		panelArribaIzq.setBackground(new Color(122,217,196));
+		panelArribaIzq.setBackground(new Color(192, 192, 192));
 		
 		panelArribaIzq1 = new JPanel();
 		panelArribaIzq.add(panelArribaIzq1);
@@ -118,7 +122,7 @@ public class VentanaPrincipal extends JFrame {
 		panelArribaDrc = new JPanel();
 		panelArriba.add(panelArribaDrc);
 		panelArribaDrc.setLayout(new GridLayout(2, 3));
-		panelArribaDrc.setBackground(new Color(122,217,196));
+		panelArribaDrc.setBackground(new Color(192, 192, 192));
 		
 		panelNorte = new JPanel();
 		panelNorte.setBackground(Color.WHITE);
@@ -141,20 +145,39 @@ public class VentanaPrincipal extends JFrame {
 		panelP1 = new JPanel();
 		panelArribaDrc.add(panelP1);
 		panelP1.setBackground(new Color(192, 192, 192));
-		panelP1.setLayout(new GridLayout(0, 3, 0, 0));
+		panelP1.setLayout(new GridLayout(0, 1, 0, 0));
+		
+		panel = new JPanel();
+		panel.setBackground(new Color(192, 192, 192));
+		panelP1.add(panel);
 		
 		btnReto = new JButton("RETO");
-		JPanel p = new JPanel();
-		p.setBackground(new Color(192, 192, 192));
-		panelP1.add(p);
 		panelP1.add(btnReto);
+		
+		panel_1 = new JPanel();
+		panel_1.setBackground(new Color(192, 192, 192));
+		panelP1.add(panel_1);
 		
 		panelP2 = new JPanel();
 		panelArribaDrc.add(panelP2);
 		panelP2.setBackground(new Color(192, 192, 192));
+		panelP2.setLayout(new GridLayout(0, 1, 0, 0));
+		
+		panel_2 = new JPanel();
+		panel_2.setBackground(new Color(192, 192, 192));
+		panelP2.add(panel_2);
 		
 		btnEntrenamiento = new JButton("ENTRENAMIENTO");
+		btnEntrenamiento.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		panelP2.add(btnEntrenamiento);
+		
+		panel_3 = new JPanel();
+		panel_3.setBackground(new Color(192, 192, 192));
+		panelP2.add(panel_3);
 		
 		
 		
@@ -195,7 +218,7 @@ public class VentanaPrincipal extends JFrame {
 		panelArribaIzq1.add(panelArribaIzq13);
 		
 		btnInicioSesion_1 = new JButton();
-		btnInicioSesion_1.setBackground(new Color(255, 128, 0));
+		btnInicioSesion_1.setBackground(new Color(255, 128, 64));
 		panelArribaIzq13.add(btnInicioSesion_1);
 		
 		btnSalir_1 = new JButton();
@@ -207,6 +230,7 @@ public class VentanaPrincipal extends JFrame {
 		panelArribaIzq13.add(btnCerrarSesion_1);
 		
 		btnRegistrarme_1 = new JButton();
+		
 		btnRegistrarme_1.setBackground(new Color(255, 0, 128));
 		panelArribaIzq13.add(btnRegistrarme_1);
 		
@@ -226,7 +250,25 @@ public class VentanaPrincipal extends JFrame {
 		ponerFotoABoton(btnCerrarSesion_1, "imagenes\\IconoCerrarSesion.png", 30, 30, 30, 30);
 		
 
-		setVisible(true);
+		
+		
+		btnRegistrarme_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ventanaRegis vReg = new ventanaRegis();
+			}
+		});
+		
+		btnSalir_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(EXIT_ON_CLOSE);
+			}
+		});
+		
+		btnInicioSesion_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ventanaInicioSesion v = new ventanaInicioSesion();
+			}
+		});
 
 		btnReto.addActionListener(new ActionListener() {
 			
@@ -235,6 +277,8 @@ public class VentanaPrincipal extends JFrame {
 				ventanaReto v1 = new ventanaReto();
 			}
 		});
+		
+		
 //		btnEntrenamiento.addActionListener(new ActionListener() {
 //			
 //			@Override
@@ -242,6 +286,8 @@ public class VentanaPrincipal extends JFrame {
 //				ventanaEntrenamiento v1 = new ventanaEntrenamiento();
 //			}
 //		});
+		
+		setVisible(true);
 	}
 		
 		 	
