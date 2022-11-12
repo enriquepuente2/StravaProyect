@@ -81,7 +81,7 @@ public class VentanaPrincipal extends JFrame {
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 255, 255));
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		//contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
 		
@@ -141,8 +141,12 @@ public class VentanaPrincipal extends JFrame {
 		panelP1 = new JPanel();
 		panelArribaDrc.add(panelP1);
 		panelP1.setBackground(new Color(192, 192, 192));
+		panelP1.setLayout(new GridLayout(0, 3, 0, 0));
 		
 		btnReto = new JButton("RETO");
+		JPanel p = new JPanel();
+		p.setBackground(new Color(192, 192, 192));
+		panelP1.add(p);
 		panelP1.add(btnReto);
 		
 		panelP2 = new JPanel();
@@ -213,16 +217,12 @@ public class VentanaPrincipal extends JFrame {
 		
 		setLocationRelativeTo( null );
 		
-		btnInicioSesion_1 = new JButton();
 		ponerFotoABoton(btnInicioSesion_1, "imagenes\\IconoIniciarSesion.png", 30, 30, 30, 30);
 		
-		btnSalir_1 = new JButton();
 		ponerFotoABoton(btnSalir_1, "imagenes\\IconoSalir.png", 30, 30, 30, 30);
 		
-		btnRegistrarme_1 = new JButton();
 		ponerFotoABoton(btnRegistrarme_1, "imagenes\\IconoRegistro.png", 30, 30, 30, 30);
 		
-		btnCerrarSesion_1 = new JButton();
 		ponerFotoABoton(btnCerrarSesion_1, "imagenes\\IconoCerrarSesion.png", 30, 30, 30, 30);
 		
 
