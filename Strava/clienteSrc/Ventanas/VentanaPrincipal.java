@@ -170,7 +170,7 @@ public class VentanaPrincipal extends JFrame {
 		btnEntrenamiento = new JButton("ENTRENAMIENTO");
 		btnEntrenamiento.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				ventanaEntrenamiento vE = new ventanaEntrenamiento();
 			}
 		});
 		panelP2.add(btnEntrenamiento);

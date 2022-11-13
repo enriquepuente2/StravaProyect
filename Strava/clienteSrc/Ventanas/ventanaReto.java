@@ -73,12 +73,9 @@ public class ventanaReto extends JFrame{
 				SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 				
 				if(Pattern.matches(er, fechIni)){
-					try {
-						Date f1 = sdf.parse(fechIni);
-					} catch (ParseException e1) {
-						JOptionPane.showMessageDialog(null, "El formato de las fechas no es correcto");
-						e1.printStackTrace();
-					}
+					JOptionPane.showMessageDialog(null,"reto creado con exito", null, JOptionPane.INFORMATION_MESSAGE);
+				}else {
+					JOptionPane.showMessageDialog(null,  "debe introducir bien las fechas" , "error",JOptionPane.ERROR_MESSAGE);
 				}
 				
 				
