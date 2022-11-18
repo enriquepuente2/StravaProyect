@@ -1,4 +1,4 @@
-package clases;
+package clienteSrc.clases;
 
 public class Usuario {
 	
