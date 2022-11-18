@@ -1,4 +1,4 @@
-package clienteSrc.Ventanas;
+package ServerSrc.Ventanas;
 
 import java.awt.FlowLayout;
 import java.awt.Font;

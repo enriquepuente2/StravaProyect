@@ -1,4 +1,4 @@
-package clienteSrc.Ventanas;
+package ServerSrc.Ventanas;
 
 import javax.swing.JFrame;
 import java.awt.GridLayout;

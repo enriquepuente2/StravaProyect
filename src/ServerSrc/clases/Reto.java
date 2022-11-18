@@ -1,4 +1,4 @@
-package clienteSrc.clases;
+package ServerSrc.clases;
 
 public class Reto {
 	private String nombre;
