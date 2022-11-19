@@ -1,9 +1,9 @@
-package ServerSrc.clases.dto;
+package es.deusto.ingenieria.sd.strava.server.data.dto;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ServerSrc.clases.Sesion;
+import es.deusto.ingenieria.sd.strava.server.data.domain.Sesion;
 	
 	public class SesionAssembler {
 		private static SesionAssembler instance;

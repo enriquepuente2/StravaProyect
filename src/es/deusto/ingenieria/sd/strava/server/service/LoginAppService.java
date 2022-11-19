@@ -1,9 +1,9 @@
-package es.deusto.ingenieria.sd.auctions.server.service;
+package es.deusto.ingenieria.sd.strava.server.service;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import ServerSrc.clases.Usuario;
+import es.deusto.ingenieria.sd.strava.server.data.domain.Usuario;
 
 public class LoginAppService {
 	private static Map<String, Usuario> mapaUsuario= new HashMap<>() ;

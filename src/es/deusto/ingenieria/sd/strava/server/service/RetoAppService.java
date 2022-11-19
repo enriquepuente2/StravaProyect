@@ -1,7 +1,7 @@
-package es.deusto.ingenieria.sd.auctions.server.service;
+package es.deusto.ingenieria.sd.strava.server.service;
 
-import ServerSrc.clases.Reto;
-import ServerSrc.clases.Usuario;
+import es.deusto.ingenieria.sd.strava.server.data.domain.Reto;
+import es.deusto.ingenieria.sd.strava.server.data.domain.Usuario;
 
 public class RetoAppService {
 	public static void activateReto(Reto reto, Usuario usuario) {

@@ -1,12 +1,12 @@
-package es.deusto.ingenieria.sd.auctions.server.remote;
+package es.deusto.ingenieria.sd.strava.server.remote;
 
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
 
-import ServerSrc.clases.Reto;
-import ServerSrc.clases.Sesion;
+import es.deusto.ingenieria.sd.strava.server.data.domain.Reto;
+import es.deusto.ingenieria.sd.strava.server.data.domain.Sesion;
 
 //This interface defines the API of the Server. It represents the Remote Facade pattern
 public interface IRemoteFacade extends Remote {	

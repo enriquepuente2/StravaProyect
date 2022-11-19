@@ -1,4 +1,4 @@
-package ServerSrc.clases;
+package es.deusto.ingenieria.sd.strava.server.data.domain;
 
 import java.util.Objects;
 

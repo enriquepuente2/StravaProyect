@@ -1,4 +1,4 @@
-package es.deusto.ingenieria.sd.auctions.server.remote;
+package es.deusto.ingenieria.sd.strava.server.remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
@@ -8,15 +8,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import ServerSrc.clases.Reto;
-import ServerSrc.clases.Sesion;
-import ServerSrc.clases.Usuario;
-import ServerSrc.clases.dto.RetoAssembler;
-import ServerSrc.clases.dto.RetoDTO;
-import ServerSrc.clases.dto.SesionDTO;
-import es.deusto.ingenieria.sd.auctions.server.service.LoginAppService;
-import es.deusto.ingenieria.sd.auctions.server.service.RetoAppService;
-import es.deusto.ingenieria.sd.auctions.server.service.SesionAppService;
+import es.deusto.ingenieria.sd.strava.server.data.domain.Reto;
+import es.deusto.ingenieria.sd.strava.server.data.domain.Sesion;
+import es.deusto.ingenieria.sd.strava.server.data.domain.Usuario;
+import es.deusto.ingenieria.sd.strava.server.data.dto.RetoAssembler;
+import es.deusto.ingenieria.sd.strava.server.data.dto.RetoDTO;
+import es.deusto.ingenieria.sd.strava.server.data.dto.SesionDTO;
+import es.deusto.ingenieria.sd.strava.server.service.LoginAppService;
+import es.deusto.ingenieria.sd.strava.server.service.RetoAppService;
+import es.deusto.ingenieria.sd.strava.server.service.SesionAppService;
 
 
 //import es.deusto.ingenieria.sd.auctions.server.data.domain.Article;

@@ -1,7 +1,7 @@
-package es.deusto.ingenieria.sd.auctions.server.service;
+package es.deusto.ingenieria.sd.strava.server.service;
 
-import ServerSrc.clases.Sesion;
-import ServerSrc.clases.Usuario;
+import es.deusto.ingenieria.sd.strava.server.data.domain.Sesion;
+import es.deusto.ingenieria.sd.strava.server.data.domain.Usuario;
 
 public class SesionAppService {
 	public static void makeSesion(Sesion sesion, Usuario usuario) {

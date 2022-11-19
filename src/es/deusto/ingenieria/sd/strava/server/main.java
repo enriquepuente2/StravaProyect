@@ -1,4 +1,4 @@
-package ServerMain;
+package es.deusto.ingenieria.sd.strava.server;
 
 public class main {
 
