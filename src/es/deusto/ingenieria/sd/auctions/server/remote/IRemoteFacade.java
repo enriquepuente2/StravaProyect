@@ -5,8 +5,8 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.List;
 
-//import es.deusto.ingenieria.sd.auctions.server.data.dto.ArticleDTO;
-//import es.deusto.ingenieria.sd.auctions.server.data.dto.CategoryDTO;
+import ServerSrc.clases.Reto;
+import ServerSrc.clases.Sesion;
 
 //This interface defines the API of the Server. It represents the Remote Facade pattern
 public interface IRemoteFacade extends Remote {	
@@ -16,7 +16,7 @@ public interface IRemoteFacade extends Remote {
 	public void logout(long token) throws RemoteException; 
 	
 	public void signup(String nombre, String contr, String mail, String fNac, 
-            String peso, String altura, String fCardiacaMaxima, String fCardiacaReposo, String log) throws RemoteException;
+            double peso, int altura, double fCardiacaMaxima, double fCardiacaReposo, String log) throws RemoteException;
 
 	public List<String> getDeporte() throws RemoteException;
 

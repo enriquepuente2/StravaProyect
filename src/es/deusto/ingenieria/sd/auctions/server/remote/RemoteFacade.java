@@ -19,7 +19,6 @@ import es.deusto.ingenieria.sd.auctions.server.service.RetoAppService;
 import es.deusto.ingenieria.sd.auctions.server.service.SesionAppService;
 
 
-
 //import es.deusto.ingenieria.sd.auctions.server.data.domain.Article;
 //import es.deusto.ingenieria.sd.auctions.server.data.domain.Category;
 //import es.deusto.ingenieria.sd.auctions.server.data.domain.User;
@@ -69,10 +68,10 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	
 	@Override
 	public synchronized void signup(String nombre, String contr, String mail, String fNac, 
-            String peso, String altura, String fCardiacaMaxima, String fCardiacaReposo, String log) throws RemoteException{
+            double peso, int altura, double fCardiacaMaxima, double fCardiacaReposo, String log) throws RemoteException{
 		System.out.println(" * RemoteFacade signup(): " + nombre + " / " + contr);
 		
-		Usuario usuario = new Usuario(nombre, contr, mail, fNac, Double.valueOf(peso), Integer.valueOf(altura), Double.valueOf(fCardiacaMaxima), Double.valueOf(fCardiacaReposo), log);
+		Usuario usuario = new Usuario(nombre, contr, mail, fNac, peso, altura, fCardiacaMaxima, fCardiacaReposo, log);
 		
 		
 		if (!loginService.signup(usuario)) {
