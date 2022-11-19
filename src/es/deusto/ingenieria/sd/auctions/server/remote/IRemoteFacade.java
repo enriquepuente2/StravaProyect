@@ -16,11 +16,11 @@ public interface IRemoteFacade extends Remote {
 	public void logout(long token) throws RemoteException; 
 	
 	public void signup(String nombre, String contr, String mail, String fNac, 
-            double peso, int altura, double fCardiacaMaxima, double fCardiacaReposo, String log) throws RemoteException;
+            String peso, String altura, String fCardiacaMaxima, String fCardiacaReposo, String log) throws RemoteException;
 
 	public List<String> getDeporte() throws RemoteException;
 
-    public String[] getDeporteRet() throws RemoteException;
+    public List<String> getDeporteRet() throws RemoteException;
 
     public List<String> getReto() throws RemoteException;
 

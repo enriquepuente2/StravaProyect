@@ -1,6 +1,8 @@
 package ServerSrc.clases.dto;
 
 	import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 	public class RetoDTO implements Serializable {
 		private static final long serialVersionUID = 1L;
@@ -13,8 +15,13 @@ package ServerSrc.clases.dto;
 		private TipoDeporte tipoDeporte;
 		
 
-		public TipoDeporte getTipoDeporte() {
-			return tipoDeporte;
+		public static List<String> getTipoDeporte() {
+			List<String> tDep = new ArrayList<>();
+			for (TipoDeporte t : TipoDeporte.values()) {
+				tDep.add(t.toString());
+				
+			}
+			return tDep;
 		}
 
 		public String getDeporte() {
