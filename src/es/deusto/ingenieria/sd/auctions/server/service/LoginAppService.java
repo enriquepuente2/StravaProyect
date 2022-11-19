@@ -23,7 +23,7 @@ public class LoginAppService {
 		return null;
 	}
 	
-	public static Map<String, Usuario> getmapUsuario(){
+	public static Map<String, Usuario> getMapUsuario(){
 		return mapaUsuario;
 	}
 }
