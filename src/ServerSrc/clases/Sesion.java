@@ -2,64 +2,70 @@ package ServerSrc.clases;
 
 public class Sesion {
 	private String titulo;
-	private TipoDeporte tipoDeporte;
-	private String distancia;////km, expresion regular en la ventana 
-	private String fechaInicial;
-	private String horaInicio;//Hora del inicio de la sesion 
-	private String duracion;//en segundos, expresion regular en la ventana
-	
-	
-	public Sesion(String titulo, TipoDeporte tipoDeporte, String distancia, String fechaInicial, String horaInicio,
-			String duracion) {
+	private String deporte;
+	private double km;
+	private String fInicio;
+	private int tiempo;
+	private double duracion;
+
+	public Sesion(String titulo, String deporte, double km, String fInicio, int tiempo, double duracion) {
 		super();
 		this.titulo = titulo;
-		this.tipoDeporte = tipoDeporte;
-		this.distancia = distancia;
-		this.fechaInicial = fechaInicial;
-		this.horaInicio = horaInicio;
+		this.deporte = deporte;
+		this.km = km;
+		this.fInicio = fInicio;
+		this.tiempo = tiempo;
 		this.duracion = duracion;
 	}
+
 	public String getTitulo() {
 		return titulo;
 	}
+
 	public void setTitulo(String titulo) {
 		this.titulo = titulo;
 	}
-	public TipoDeporte getTipoDeporte() {
-		return tipoDeporte;
+
+
+	public double getKm() {
+		return km;
 	}
-	public void setTipoDeporte(TipoDeporte tipoDeporte) {
-		this.tipoDeporte = tipoDeporte;
+
+	public void setKm(double km) {
+		this.km = km;
 	}
-	public String getDistancia() {
-		return distancia;
+
+	public String getfInicio() {
+		return fInicio;
 	}
-	public void setDistancia(String distancia) {
-		this.distancia = distancia;
+
+	public void setfInicio(String fInicio) {
+		this.fInicio = fInicio;
 	}
-	public String getFechaInicial() {
-		return fechaInicial;
+
+	public int getTiempo() {
+		return tiempo;
 	}
-	public void setFechaInicial(String fechaInicial) {
-		this.fechaInicial = fechaInicial;
+
+	public void setTiempo(int tiempo) {
+		this.tiempo = tiempo;
 	}
-	public String getHoraInicio() {
-		return horaInicio;
-	}
-	public void setHoraInicio(String horaInicio) {
-		this.horaInicio = horaInicio;
-	}
-	public String getDuracion() {
+
+	public double getDuracion() {
 		return duracion;
 	}
-	public void setDuracion(String duracion) {
+
+	public void setDuracion(double duracion) {
 		this.duracion = duracion;
 	}
-	@Override
-	public String toString() {
-		return "Sesion [titulo=" + titulo + ", tipoDeporte=" + tipoDeporte + ", distancia=" + distancia
-				+ ", fechaInicial=" + fechaInicial + ", horaInicio=" + horaInicio + ", duracion=" + duracion + "]";
+
+	public String getDeporte() {
+		return deporte;
 	}
-	
-	
+
+	public void setDeporte(String deporte) {
+		this.deporte = deporte;
+	}
+		
+
 }

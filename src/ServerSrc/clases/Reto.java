@@ -1,60 +1,100 @@
 package ServerSrc.clases;
 
+import java.util.Objects;
+
+
 public class Reto {
 	private String nombre;
-	private String fechaInicial;
-	private String fechaFinal;
-	private String tiempoObjetivo;// tiempo objetivo (50 km., 240 minutos)
-	private TipoDeporte tipoDeporte;//Tipos de deporte: Ciclismo, runing o ambas
+	private String fIni;
+	private String fFin;
+	private double dist;
+	private double obj;// tiempo objetivo (50 km., 240 minutos)
+	private String deporte;
 	
 	
-	public Reto(String nombre, String fechaInicial, String fechaFinal, String tiempoObjetivo, TipoDeporte tipoDeporte) {
+	public Reto(String nombre, String fIni, String fFin, double dist, double obj, String deporte) {
 		super();
 		this.nombre = nombre;
-		this.fechaInicial = fechaInicial;
-		this.fechaFinal = fechaFinal;
-		this.tiempoObjetivo = tiempoObjetivo;
-		this.tipoDeporte = tipoDeporte;
+		this.fIni = fIni;
+		this.fFin = fFin;
+		this.dist = dist;
+		this.obj = obj;
+		this.deporte = deporte;
 	}
-	
-	
+
+
 	public String getNombre() {
 		return nombre;
 	}
+
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public String getFechaInicial() {
-		return fechaInicial;
+
+
+	public String getfIni() {
+		return fIni;
 	}
-	public void setFechaInicial(String fechaInicial) {
-		this.fechaInicial = fechaInicial;
+
+
+	public void setfIni(String fIni) {
+		this.fIni = fIni;
 	}
-	public String getFechaFinal() {
-		return fechaFinal;
+
+
+	public String getfFin() {
+		return fFin;
 	}
-	public void setFechaFinal(String fechaFinal) {
-		this.fechaFinal = fechaFinal;
+
+
+	public void setfFin(String fFin) {
+		this.fFin = fFin;
 	}
-	public String getTiempoObjetivo() {
-		return tiempoObjetivo;
+
+
+	public double getDist() {
+		return dist;
 	}
-	public void setTiempoObjetivo(String tiempoObjetivo) {
-		this.tiempoObjetivo = tiempoObjetivo;
+
+
+	public void setDist(double dist) {
+		this.dist = dist;
 	}
-	public TipoDeporte getTipoDeporte() {
-		return tipoDeporte;
+
+
+	public double getObj() {
+		return obj;
 	}
-	public void setTipoDeporte(TipoDeporte tipoDeporte) {
-		this.tipoDeporte = tipoDeporte;
+
+
+	public void setObj(double obj) {
+		this.obj = obj;
+	}
+
+
+	public String getDeporte() {
+		return deporte;
+	}
+
+
+	public void setDeporte(String deporte) {
+		this.deporte = deporte;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Reto [nombre=" + nombre + ", fechaInicial=" + fechaInicial + ", fechaFinal=" + fechaFinal
-				+ ", tiempoObjetivo=" + tiempoObjetivo + ", tipoDeporte=" + tipoDeporte + "]";
+		return "Reto [nombre=" + nombre + ", fIni=" + fIni + ", fFin=" + fFin + ", dist=" + dist + ", obj=" + obj
+				+ ", deporte=" + deporte + "]";
 	}
+
+
+	
+
+
+	
+	
 	
 	
 }
