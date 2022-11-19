@@ -82,6 +82,81 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 			throw new RemoteException("El usuario no esta logeado!");
 		}
 	}
+	/*
+	@Override
+    public List<String> getDeporte() throws RemoteException {
+        return SesionDTO.getTipoDeporte();
+    }
+
+    @Override
+    public String[] getDeporteRet() throws RemoteException {
+        return RetoDTO.getTDeporte();
+    }
+
+    @Override
+    public List<String> getReto() throws RemoteException {
+        List<String> retos = new ArrayList<>();
+        for(Reto r: LoginAppService.getUserMap().get(serverState.get(serverState.keySet().toArray()[0]).getEmail()).getRetos()) {
+            retos.add(RetoAssembler.retoToDTO(r).toString());
+        }
+        return retos;
+    }
+
+    @Override
+    public List<String> getRetoActivado() throws RemoteException {
+        List<String> retos = new ArrayList<>();
+        for(Reto r: LoginAppService.getUserMap().get(serverState.get(serverState.keySet().toArray()[0]).getEmail()).getRetosAct()) {
+            retos.add(RetoAssembler.retoToDTO(r).toString());
+        }
+        return retos;
+    }
+
+    @Override
+    public void activateReto(String nombre) throws RemoteException {
+        System.out.println(" * Activating Reto: " + nombre);
+        User user = serverState.get(serverState.keySet().toArray()[0]);
+        Reto reto = null;
+        for(Reto r: LoginAppService.getUserMap().get(serverState.get(serverState.keySet().toArray()[0]).getEmail()).getRetos()) {
+            if(r.toString().equals(nombre)) {
+                reto = r;
+            }
+        }
+        if(reto != null) {
+            retoAppService.activateReto(reto, user);
+        }
+    }
+    @Override
+    public void makeSesion(String titulo, String deporte, double km, String fInicio, int hora, double duracion)
+            throws RemoteException {
+        System.out.println(" * Making Sesion: " + titulo + " " + deporte);
+        Sesion sesion = new Sesion(titulo, deporte, km, fInicio, hora, duracion);
+        User user = serverState.get(serverState.keySet().toArray()[0]);
+        sesionAppService.makeSesion(sesion, user);
+    }
+
+    @Override
+    public void makeReto(String nombre, String fInicio, String fFin, double distancia, double objetivo,
+            String deporte) throws RemoteException {
+        System.out.println(" * Making Reto: " + nombre + " " + deporte);
+        Reto reto = new Reto(nombre, fInicio, fFin, distancia, objetivo, deporte);
+        User user = serverState.get(serverState.keySet().toArray()[0]);
+        retoAppService.makeReto(reto, user);
+    }
+    */
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 //	@Override
 //	public List<CategoryDTO> getCategories() throws RemoteException {

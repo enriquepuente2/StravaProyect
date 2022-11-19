@@ -1,4 +1,4 @@
-package Main;
+package ServerMain;
 
 public class main {
 

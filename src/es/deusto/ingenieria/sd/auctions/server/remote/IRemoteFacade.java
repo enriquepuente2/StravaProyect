@@ -17,7 +17,24 @@ public interface IRemoteFacade extends Remote {
 	
 	public void signup(String nombre, String contr, String mail, String fNac, 
             double peso, int altura, double fCardiacaMaxima, double fCardiacaReposo, String log) throws RemoteException;
-	
+
+	public List<String> getDeporte() throws RemoteException;
+
+    public String[] getDeporteRet() throws RemoteException;
+
+    public List<String> getReto() throws RemoteException;
+
+    public List<String> getRetoActivado() throws RemoteException;
+
+    public void makeSesion(String titulo, String deporte, double km, String fInicio, 
+            int hora, double duracion) throws RemoteException;
+
+    public void makeReto(String nombre, String fInicio, String fFin, 
+            double distancia, double objetivo, String deporte) throws RemoteException;
+
+    public void activateReto(String nombre) throws RemoteException;
+    
+    
 //	public List<CategoryDTO> getCategories() throws RemoteException;
 //	
 //	public List<ArticleDTO> getArticles(String aCategory) throws RemoteException;
