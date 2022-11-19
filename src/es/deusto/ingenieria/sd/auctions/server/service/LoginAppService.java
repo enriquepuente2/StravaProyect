@@ -9,16 +9,16 @@ public class LoginAppService {
 	private static Map<String, Usuario> mapaUsuario= new HashMap<>() ;
 	
 	public boolean signup(Usuario usuario) {
-		if (mapaUsuario.containsKey(usuario.getEmail())) {
+		if (mapaUsuario.containsKey(usuario.getMail())) {
 			return false;
 		}
-		mapaUsuario.put(usuario.getEmail(), usuario);
+		mapaUsuario.put(usuario.getMail(), usuario);
 		return true;
 	}
 	
-	public Usuario login(String email, String contrasenia) {
-		if (mapaUsuario.containsKey(email)) {
-			return mapaUsuario.get(email);
+	public Usuario login(String mail, String contr) {
+		if (mapaUsuario.containsKey(mail)) {
+			return mapaUsuario.get(mail);
 		}
 		return null;
 	}

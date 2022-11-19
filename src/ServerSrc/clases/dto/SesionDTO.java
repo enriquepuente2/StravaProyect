@@ -18,7 +18,10 @@ public class SesionDTO implements Serializable{
 	
 	public static List<String> getTipoDeporte() {
 		List<String> tDep = new ArrayList<>();
-		Enum.GetNames(typeof(TipoDeporte).ToList(tDep));
+		for (TipoDeporte t : TipoDeporte.values()) {
+			tDep.add(t.toString());
+			
+		}
 		return tDep;
 	}
 

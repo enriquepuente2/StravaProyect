@@ -62,11 +62,11 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	}
 	
 	@Override
-	public synchronized void signup(String nombre, String email, String fechaNac, String peso, String altura, 
-			String frecCardiacaMax, String frecCardiacaReposo, String contrasenia, TipoProvedor tipoProvedor) throws RemoteException {
-		System.out.println(" * RemoteFacade signup(): " + nombre + " / " + contrasenia);
+	public synchronized void signup(String nombre, String contr, String mail, String fNac, 
+            double peso, int altura, double fCardiacaMaxima, double fCardiacaReposo, String log) throws RemoteException{
+		System.out.println(" * RemoteFacade signup(): " + nombre + " / " + contr);
 		
-		Usuario usuario = new Usuario(nombre, email, fechaNac, peso, altura, frecCardiacaMax, frecCardiacaReposo,  contrasenia, tipoProvedor);
+		Usuario usuario = new Usuario(nombre, contr, mail, fNac, Double.valueOf(peso), Integer.valueOf(altura), Double.valueOf(fCardiacaMaxima), Double.valueOf(fCardiacaReposo), log);
 		
 		
 		if (!loginService.signup(usuario)) {
@@ -81,13 +81,6 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 		} else {
 			throw new RemoteException("El usuario no esta logeado!");
 		}
-	}
-
-	@Override
-	public void singup(String nombre, String email, String fechaNac, String peso, String altura, String frecCardiacaMax,
-			String frecCardiacaReposo, String contrasenia) throws RemoteException {
-		// TODO Auto-generated method stub
-		
 	}
 	
 //	@Override
