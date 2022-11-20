@@ -23,6 +23,8 @@ public interface IRemoteFacade extends Remote {
     public List<String> getDeporteRet() throws RemoteException;
 
     public List<String> getReto() throws RemoteException;
+    
+    public List<String> getSesion() throws RemoteException;
 
     public List<String> getRetoActivado() throws RemoteException;
 

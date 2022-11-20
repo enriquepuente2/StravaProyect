@@ -13,6 +13,7 @@ import es.deusto.ingenieria.sd.strava.server.data.domain.Sesion;
 import es.deusto.ingenieria.sd.strava.server.data.domain.Usuario;
 import es.deusto.ingenieria.sd.strava.server.data.dto.RetoAssembler;
 import es.deusto.ingenieria.sd.strava.server.data.dto.RetoDTO;
+import es.deusto.ingenieria.sd.strava.server.data.dto.SesionAssembler;
 import es.deusto.ingenieria.sd.strava.server.data.dto.SesionDTO;
 import es.deusto.ingenieria.sd.strava.server.service.LoginAppService;
 import es.deusto.ingenieria.sd.strava.server.service.RetoAppService;
@@ -98,6 +99,15 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
         return RetoDTO.getTipoDeporte();
     }
 
+    @Override
+    public List<String> getSesion() throws RemoteException {
+        List<String> sesiones = new ArrayList<>();
+        for(Sesion s: LoginAppService.getMapUsuario().get(serverState.get(serverState.keySet().toArray()[0]).getMail()).getSesiones()) {
+            sesiones.add(SesionAssembler.sesionToDTO(s).toString());
+        }
+        return sesiones;
+    }
+    
     @Override
     public List<String> getReto() throws RemoteException {
         List<String> retos = new ArrayList<>();

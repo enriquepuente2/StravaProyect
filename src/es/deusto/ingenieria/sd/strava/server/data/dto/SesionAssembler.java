@@ -3,6 +3,7 @@ package es.deusto.ingenieria.sd.strava.server.data.dto;
 import java.util.ArrayList;
 import java.util.List;
 
+import es.deusto.ingenieria.sd.strava.server.data.domain.Reto;
 import es.deusto.ingenieria.sd.strava.server.data.domain.Sesion;
 	
 	public class SesionAssembler {
@@ -18,7 +19,7 @@ import es.deusto.ingenieria.sd.strava.server.data.domain.Sesion;
 			return instance;
 		}
 
-		public SesionDTO sesionToDTO(Sesion sesion) {
+		public static SesionDTO sesionToDTO(Sesion sesion) {
 			SesionDTO dto = new SesionDTO();
 			dto.setDeporte(sesion.getDeporte());
 			dto.setDuracion(sesion.getDuracion());
@@ -40,4 +41,5 @@ import es.deusto.ingenieria.sd.strava.server.data.domain.Sesion;
 			return dtos;		
 		}
 	}
+
 
