@@ -1,10 +1,11 @@
 package es.deusto.ingeniaria.sd.strava.gateway;
 
 import java.rmi.Naming;
+import java.rmi.RemoteException;
 
 import es.deusto.ingenieria.sd.strava.remote.IGoogleServer;
 
-public class GateWayGoogle {
+public class GateWayGoogle implements IGateWay{
 	private static GateWayGoogle gateWay;
 	private String[] args;
 	private IGoogleServer googleServer;
@@ -34,5 +35,16 @@ public class GateWayGoogle {
 		return gateWay;
 	}
 	
-	
+	@Override
+	public boolean login(String mail, String contr) throws RemoteException {
+		System.out.println("   - LogIn from Google Servers");
+
+		try {
+		return this.googleServer.login(mail, contr);
+		} catch(Exception e) {
+		System.out.println(" $ Error LogIn with Google: " + e);
+		return false;
+		}
+		return false;
+	}
 }
