@@ -3,6 +3,8 @@ package es.deusto.ingenieria.sd.strava.server.service;
 import java.util.HashMap;
 import java.util.Map;
 
+import es.deusto.ingeniaria.sd.strava.gateway.GateWayFacebook;
+import es.deusto.ingeniaria.sd.strava.gateway.GateWayGoogle;
 import es.deusto.ingenieria.sd.strava.server.data.domain.Usuario;
 
 public class LoginAppService {
@@ -17,6 +19,8 @@ public class LoginAppService {
 	}
 	
 	public Usuario login(String mail, String contr) {
+		GateWayFacebook.getGateWay().socket();
+		GateWayGoogle.getGateWay().rmiGoogleServer();
 		if (mapaUsuario.containsKey(mail)) {
 			return mapaUsuario.get(mail);
 		}

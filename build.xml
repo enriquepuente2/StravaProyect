@@ -9,7 +9,11 @@
 	<property name="rmiregistry.IP" value="127.0.0.1"/> 
 	<property name="rmiregistry.port" value="1099"/> 
 	<property name="server.name" value="eAuctions"/>
-
+	<property environment="env"/>
+	<property name="server.IP" value="127.0.0.1"/>
+	<property name="server.port" value="8001"/> 
+	<property name="message" value="is there anybody out there?"/>
+	
 	<path id="classpath">
         <fileset dir="${lib.dir}">
             <include name="**/*.jar"/>
@@ -41,6 +45,9 @@
         	<arg value="${rmiregistry.IP}"/> 
 	 		<arg value="${rmiregistry.port}"/> 
 			<arg value="${server.name}"/> 
+			<arg value="${server.IP}"/> 
+			<arg value="${server.port}"/> 
+			<arg value="${message}"/> 
         </java>
     </target>
 </project>
