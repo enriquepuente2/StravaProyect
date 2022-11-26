@@ -7,7 +7,7 @@ import es.deusto.ingenieria.sd.strava.remote.IGoogleServer;
 
 public class GateWayGoogle implements IGateWay{
 	private static GateWayGoogle gateWay;
-	private String[] args;
+	
 	private IGoogleServer googleServer;
 	
 	
@@ -20,14 +20,6 @@ public class GateWayGoogle implements IGateWay{
 		}
 	}
 
-	public void rmiGoogleServer() {
-		try {
-			this.googleServer.googleRmi();
-		} catch (Exception e) {
-			System.err.println("Error : " + e);
-		}
-	}
-	
 	public static GateWayGoogle getGateWay() {
 		if(gateWay == null) {
 			gateWay = new GateWayGoogle();
@@ -40,11 +32,10 @@ public class GateWayGoogle implements IGateWay{
 		System.out.println("   - LogIn from Google Servers");
 
 		try {
-		return this.googleServer.login(mail, contr);
+			return this.googleServer.login(mail, contr);
 		} catch(Exception e) {
-		System.out.println(" $ Error LogIn with Google: " + e);
-		return false;
+			System.out.println(" $ Error LogIn with Google: " + e);
+			return false;
 		}
-		return false;
 	}
 }

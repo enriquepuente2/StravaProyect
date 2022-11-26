@@ -15,20 +15,11 @@ import es.deusto.ingenieria.sd.strava.server.data.dto.RetoAssembler;
 import es.deusto.ingenieria.sd.strava.server.data.dto.RetoDTO;
 import es.deusto.ingenieria.sd.strava.server.data.dto.SesionAssembler;
 import es.deusto.ingenieria.sd.strava.server.data.dto.SesionDTO;
+import es.deusto.ingenieria.sd.strava.server.data.dto.TipoProveedor;
 import es.deusto.ingenieria.sd.strava.server.service.LoginAppService;
 import es.deusto.ingenieria.sd.strava.server.service.RetoAppService;
 import es.deusto.ingenieria.sd.strava.server.service.SesionAppService;
 
-
-//import es.deusto.ingenieria.sd.auctions.server.data.domain.Article;
-//import es.deusto.ingenieria.sd.auctions.server.data.domain.Category;
-//import es.deusto.ingenieria.sd.auctions.server.data.domain.User;
-//import es.deusto.ingenieria.sd.auctions.server.data.dto.ArticleAssembler;
-//import es.deusto.ingenieria.sd.auctions.server.data.dto.ArticleDTO;
-//import es.deusto.ingenieria.sd.auctions.server.data.dto.CategoryAssembler;
-//import es.deusto.ingenieria.sd.auctions.server.data.dto.CategoryDTO;
-//import es.deusto.ingenieria.sd.auctions.server.services.BidAppService;
-//import es.deusto.ingenieria.sd.auctions.server.services.LoginAppService;
 
 public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {	
 	private static final long serialVersionUID = 1L;
@@ -69,10 +60,10 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	
 	@Override
 	public synchronized void signup(String nombre, String contr, String mail, String fNac, 
-            double peso, int altura, double fCardiacaMaxima, double fCardiacaReposo, String log) throws RemoteException{
+            double peso, int altura, double fCardiacaMaxima, double fCardiacaReposo, String log, TipoProveedor tipoProvedor) throws RemoteException{
 		System.out.println(" * RemoteFacade signup(): " + nombre + " / " + contr);
 		
-		Usuario usuario = new Usuario(nombre, contr, mail, fNac, peso, altura, fCardiacaMaxima, fCardiacaReposo, log);
+		Usuario usuario = new Usuario(nombre, contr, mail, fNac, peso, altura, fCardiacaMaxima, fCardiacaReposo, log,tipoProvedor);
 		
 		
 		if (!loginService.signup(usuario)) {

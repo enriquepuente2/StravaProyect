@@ -99,14 +99,14 @@ public class GateWayFacebook implements IGateWay{
 		String data = in.readUTF();
 		System.out.println("- StravaClient: Received data from '" + tcpSocket.getInetAddress().getHostAddress() + ":" + tcpSocket.getPort() + "' -> '" + data + "'");
 		if(data.equals("true")) {
-		return true;
+			return true;
 		}
-		return false;
+			return false;
 		} catch (Exception e) {
-		System.out.println("# StravaClient: Error: " + e.getMessage());
+			System.out.println("# StravaClient: Error: " + e.getMessage());
+			return false;
 		}
-		return false;
-
+		
 	}
 	
 }

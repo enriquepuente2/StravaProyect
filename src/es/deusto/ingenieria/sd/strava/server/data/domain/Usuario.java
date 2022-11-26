@@ -23,7 +23,7 @@ public class Usuario {
 	
 	
 	public Usuario(String nombre, String contr, String mail, String fNac, double peso, 
-			int alt, double fCardMax, double fCardRep, String log) {
+			int alt, double fCardMax, double fCardRep, String log, TipoProveedor tipoProveedor) {
 		this.nombre = nombre;
 		this.contr = contr;
 		this.mail = mail;
@@ -33,6 +33,7 @@ public class Usuario {
 		this.fCardiacaMaxima = fCardMax;
 		this.fCardiacaReposo = fCardRep;
 		this.log = log;
+		this.tipoProveedor = tipoProveedor;
 		this.retos = new ArrayList<>();
 		this.sesiones = new ArrayList<>();
 	}
