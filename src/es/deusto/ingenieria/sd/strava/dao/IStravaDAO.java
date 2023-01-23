@@ -10,12 +10,13 @@ import es.deusto.ingenieria.sd.strava.server.data.domain.Usuario;
 public interface IStravaDAO {
 
 	public void storeUsuario(Usuario usuario);
-	public Usuario getUsuario(String name);
+	public Usuario getUsuario(String mail, String password);
+	public Usuario getUsuario(String mail);
 	public void updateUsuario(Usuario usuario);
 	
-	public List<Reto> getRetos();
-	public List<Sesion> getSesiones();
-	public List<Reto> getRetosActivos();
+	public List<Reto> getRetos(Usuario usuario);
+	public List<Sesion> getSesiones(Usuario usuario);
+	public List<Reto> getRetosActivos(Usuario usuario);
 
 	public void deleteAllUsuarios();
 
