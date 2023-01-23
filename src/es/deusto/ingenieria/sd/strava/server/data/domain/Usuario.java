@@ -1,10 +1,16 @@
 package es.deusto.ingenieria.sd.strava.server.data.domain;
 
 import java.util.ArrayList;
+
 import java.util.List;
+
+import javax.jdo.annotations.Join;
+import javax.jdo.annotations.PersistenceCapable;
 
 import es.deusto.ingenieria.sd.strava.server.data.dto.TipoProveedor;
 
+
+@PersistenceCapable(detachable = "true")
 public class Usuario {	
 	private String nombre;
 	private String contr;
@@ -16,8 +22,11 @@ public class Usuario {
 	private double fCardiacaReposo;
 	private String log;
 	private TipoProveedor tipoProveedor;
+	@Join
 	private List<Reto> retos = new ArrayList<>();
+	@Join
 	private List<Reto> retosAct = new ArrayList<>();
+	@Join
 	private List<Sesion> sesiones = new ArrayList<>();
 	
 	
